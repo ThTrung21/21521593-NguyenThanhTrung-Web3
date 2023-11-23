@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu đăng ký</title>
+    <style>
+h1{
+    color: white;
+    -webkit-text-stroke: 1px rgba(0,34,255,0.5);
+    text-shadow: rgba(0,34,255,0.65) -4px -2px 5px;
+    margin:auto;
+    text-align: center;
+    font-size: 48px;
+}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: rgba(0,34,255,0.65) 2px 2px 5px;
+    min-width:400px;
+    max-width: 700px;
+    font-size: 20px;
+    background-image: url("hinh/khuyen-mai.png") ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    }
+.label{
+    width: 50%;
+    text-align: right;
+    color: navy;
+    font-weight: bold;
+
+}
+.userInput{
+    margin-left: 10px;
+    width: 100%;
+    border: 1px blue dotted;
+    border-radius: 15px;
+    background-color: rgba(0, 162, 255, 0.5);
+    margin-top: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+textarea{
+    font-family: 'Times New Roman', Times, serif;
+    resize: none;
+}
+
+.userInput:focus{
+    border-color: black;
+}
+table{
+    width: 100%;
+}
+#txtEmail, #txtPhone, #txtGuess
+{
+    width: 50%;
+}
+.radioBtn{
+    margin-left: 5px;
+    color: navy;
+    font-weight: bold;
+    
+}
+#job{
+    font-size: 18px;
+    margin-left: 5px;
+    width: 30%;
+}
+#product{
+    width: 50%;
+    font-size: 18px;
+    padding: 5px;
+}
+.btn{
+    margin-left: 10px;
+    border: 1px blue dotted;
+    border-radius: 15px;
+    color: white;
+    margin-top: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 10px;
+    background: linear-gradient(to bottom,rgb(17, 0, 255) ,rgb(0, 217, 255))
+}
+.align-right{
+    float: right;
+}
+    </style>
+</head>
+<body>
+    <h1>
+        Phiếu đăng ký
+    </h1>
+    
+    <form id="loginForm">
+    <table>
+        <tbody>
+        
+        <tr>
+            <td class="label"><label for="txtName">Tên người dùng</label></td>
+            <td><input type="text" id="txtName" class="userInput" name="txtName"></td>
+        </tr>
+        <tr>
+            <td class="label"><label for="txtAddress">Địa chỉ</label></td>
+            <td><textarea rows="5"  id="txtAddress"class="userInput" name="txtAddress"></textarea></td>
+        </tr>
+        <tr>
+            <td class="label"><label for="txtEmail">Email</label></td>
+            <td><input  type="text" id="txtEmail" class="userInput" name="txtEmail"></td>
+        </tr>
+        <tr>
+            <td class="label"><label for="txtPhone">Điện thoại</label></td>
+            <td><input type="number" id="txtPhone" class="userInput" name="txtPhone"></td>
+        </tr>
+        <tr>
+            <td class="label"><label >Giới tính</label></td>
+            <td>
+                <label class="radioBtn" for="male">
+                    <input type="radio" id="male" name="gender" value="male" checked="checked"> Nam
+                </label>
+                <label class="radioBtn" for="female">
+                    <input type="radio" id="female" name="gender" value="female"> Nữ
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="label"><label >Nghề Nghiệp</label></td>
+            <td>
+                <select class="tour" id="tour">
+                    <optgroup label="Miền Bắc">
+                        <option value="1" selected="selected">Hà Nội - Hạ Long - Sapa</option>
+                        <option value="2">Hà Nội - Chùa Hương - Ninh Bình</option>
+                        <option value="3">Hà Nội - Cát Bà - Tuần Châu</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">
+                        <option value="4">Huế - Bạch Mã - Đà Nẵng</option>
+                        <option value="5">Nha Trang - Đà Lạt</option>
+                        <option value="6">Buôn Mê Thuột - Gia Lai - Kontum</option>
+                        </optgroup>
+                        <optgroup label="Miền Nam">
+                        <option value="7">TpHCM - Cần Thơ - Cà Mau</option>
+                        <option value="8">Phú Quốc - Côn Đảo</option>
+                        </optgroup>
+                        
+                </select>    
+            </td>
+        </tr>
+        <tr>
+            <td class="label"><label >Chọn sản phẩm</label></td>
+            <td>
+                <select class="userInput" id="product" size ="4" multiple="multiple" >
+                    <option value="1" selected="selected">Kem đánh răng</option>
+                    <option value="1" >Dầu gội</option>
+                    <option value="1" >Sữa tắm</option>
+                    <option value="1" >Bột giặt</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="label"><label for="txtGuess">Dự đoán số người tham gia</label></td>
+            <td><input  type="number" id="txtGuess" class="userInput" name="txtGuess"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn align-right"  id="BtnSubmit" value="Đăng ký"></td>
+            <td><input type="reset" class="btn" id="BtnReset" value="Làm lại"></td>
+        </tr>
+        </tbody>
+    </table>
+    </form>
+    <script>
+        const form = document.getElementById('loginForm');
+        const nameInput = document.getElementById('txtName');
+        const addressInput = document.getElementById('txtAddress');
+        const emailInput = document.getElementById('txtEmail');
+        const phoneInput = document.getElementById('txtPhone');
+        const maleRadioButton = document.getElementById('male');
+        const femaleRadioButton = document.getElementById('female');
+        const guessInput = document.getElementById('txtGuess');
+
+
+
+        form.addEventListener('submit', function(event) 
+    {
+        event.preventDefault(); 
+
+        const name = nameInput.value;
+        const address = addressInput.value;
+        const email = emailInput.value;
+        const phone = phoneInput.value;
+        const guess = guessInput.value;
+        
+
+        if( (name.trim() === '' ) || (address.trim()==='')||
+            (email.trim()==='') || (phone.trim()==='') ||
+            (guess.trim()==='')  )
+        {
+            alert('Missing Inputs');
+        }
+        else
+        {
+            alert('Đăng ký thành công!');
+        }
+    });
+    </script>
+</body>
+</html>

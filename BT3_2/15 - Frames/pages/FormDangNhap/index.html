@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+
+form{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px dotted red;
+    border-radius: 5px;
+    background-image: url("hinh/login.jpg") ;
+    background-repeat: no-repeat;
+    background-position: right, center; 
+
+    background-size:40% ;
+    padding: 0px 80px 50px 80px;
+    min-height:200px;
+    max-height: 200px;
+}
+.label{
+    width: 48%;
+    text-align: right;
+}
+#BtnSubmit
+{
+    background-color: red;
+    color: white;
+    border: silver solid 2px;
+    border-radius: 10px;
+    
+    text-align: center;
+    width: 30%;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+h2{
+    color:maroon;
+    font-size: 32px;
+    margin-left: auto;
+    text-align: center;
+}
+.userInput{
+    background-color: rgba(255, 0, 0, 0.3);
+    border: dotted red 1px;
+    border-radius: 10px;
+    
+}
+#greetingMessage{
+    text-align: center;
+    color: red;
+}
+
+    </style>
+    
+</head>
+<body>
+    <form id="loginForm">
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="2"  >
+                    <h2>Form đăng nhập</h2>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"><label for="txtUser">Tên người dùng:</label></td>
+                <td><input type="text" id="txtUser" class="userInput" name="txtUser"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="txtPass">Mật khẩu:</label></td>
+                <td><input type="password" id="txtPass"class="userInput" name="txtPass"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit"  id="BtnSubmit" value="Đăng nhập">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p class="message" id="greetingMessage"> </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </form>
+    <script>
+        const form = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('txtUser');
+        const passwordInput = document.getElementById('txtPass');
+
+        const greetingMessage = document.getElementById('greetingMessage');
+
+        form.addEventListener('submit', function(event) 
+    {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        if( username.trim() === '')
+        {
+        alert('Please enter a username.');
+        }
+        else if( password.trim()==='')
+        {
+            alert('Please enter the password.');
+        }
+        else {
+            greetingMessage.textContent ="Chào bạn "  + username;
+        }
+    });
+    </script>
+</body>
+</html>

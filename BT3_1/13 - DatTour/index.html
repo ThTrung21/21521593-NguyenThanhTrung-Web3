@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatTour</title>
+    <style>
+h1{
+    color: blue;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    min-width:400px;
+    max-width: 700px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    
+}
+textarea{
+    resize: none;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 248, 155);
+}
+td{
+    border: 1px solid blue;
+    padding: 8px;
+  
+}
+
+.label{
+    width: 40%;
+    
+}
+.userInput{
+    font-family: 'Times New Roman', Times, serif;
+    width: 80%;
+}
+.tour{
+    width: 250px;
+}
+.SL{
+    width: 80%;
+    min-width: 800;
+    text-align: left;
+    margin: auto;
+}
+#btnSubmit{
+    text-align: center;
+    margin: auto;
+    display: block;
+    
+}
+#txtAlert{
+    color: red;
+    text-align: center;
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+    <h1>
+        ĐĂNG KÝ DU LỊCH
+    </h1>
+    <form id="DKDuLich">
+        <table>
+            <tr>
+                <td class="label"><label for="txtName">Họ tên</label></td>
+                <td><input type="text" id="txtName" class="userInput" name="txtName"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="txtAddress">Địa chỉ</label></td>
+                <td>
+                <textarea rows="4"  id="txtAddress"class="userInput" name="txtAddress"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"><label for="txtPhone">Điện thoại</label></td>
+                <td><input type="number" id="txtPhone" class="userInput" name="txtPhone"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="checkVN">Khách Việt Nam</label></td>
+                <td><input type="checkbox" id="checkVN" name="checkVN"></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="tour">Chọn tour</label></td>
+                <td>
+                    <select id="tour" class="tour">
+                        <optgroup label="Miền Bắc">
+                            <option value="1" selected="selected">Hà Nội - Hạ Long - Sapa</option>
+                            <option value="2">Hà Nội - Chùa Hương - Ninh Bình</option>
+                            <option value="3">Hà Nội - Cát Bà - Tuần Châu</option>
+                            </optgroup>
+                            <optgroup label="Miền Trung">
+                            <option value="4">Huế - Bạch Mã - Đà Nẵng</option>
+                            <option value="5">Nha Trang - Đà Lạt</option>
+                            <option value="6">Buôn Mê Thuột - Gia Lai - Kontum</option>
+                            </optgroup>
+                            <optgroup label="Miền Nam">
+                            <option value="7">TpHCM - Cần Thơ - Cà Mau</option>
+                            <option value="8">Phú Quốc - Côn Đảo</option>
+                            </optgroup>                           
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"><label>Phương tiện</label></td>
+                <td>
+                    <label class="radioBtn" for="plane">
+                        <input type="radio" id="plane" name="vehicle" value="Máy bay" checked="checked">Máy bay
+                    </label>
+                    <label class="radioBtn" for="car">
+                        <input type="radio" id="car" name="vehicle" value="Xe du lịch">Xe du lịch
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset class="SL">
+                        <legend >Số lượng đoàn khách</legend>
+                        Người lớn <input id="nguoi_lon" class="inputSL" type="text"  />
+                        Trẻ em <input id="tre_em" class="inputSL" type="text"  />
+                        </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="label"><label for="txtNote">Ghi chú thêm</label></td>
+                <td>
+                <textarea rows="5"  id="txtNote"class="userInput" name="txtNote"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" id="btnSubmit" value="Đồng ý">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p id="txtAlert"></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        const form = document.getElementById('DKDuLich');
+
+        const nameInput = document.getElementById('txtName');
+        const addressInput = document.getElementById('txtAddress');
+        const numberInput = document.getElementById('txtPhone');
+        
+        const adultInput = document.getElementById('nguoi_lon');
+        const childrenInput = document.getElementById('tre_em');
+
+        const greetingMessage = document.getElementById('txtAlert');
+
+        form.addEventListener('submit', function(event) 
+    {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        const name = nameInput.value;
+        const address = addressInput.value;
+        const number = numberInput.value;
+        const adult = adultInput.value;
+        const children = childrenInput.value;
+
+
+        if( name.trim() === '' || address.trim()==='' 
+        ||number.trim()===''||adult.trim()===''|| children.trim()==='')
+        {
+            alert('Please enter every fields.');
+        }
+        
+        else {
+            greetingMessage.textContent ='Bạn đã đăng ký thành công!!!';
+        }
+    });
+    </script>
+</body>
+</html>
