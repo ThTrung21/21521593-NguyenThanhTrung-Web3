@@ -56,6 +56,17 @@ header{
     clear: both;
     font-size: smaller;
 }
+button{
+    border: white 2px  solid ;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: white;
+    background-color: #76ed15;
+    border-radius: 8px;
+    padding: 3px;
+    
+}
 #copyright{
     width: 20%;
     float: left;
@@ -119,8 +130,7 @@ header{
     border: none ;
     outline: none;
     color: white ;
-    
-     ;
+    background-color: inherit ;
     font-family: inherit ;
     margin: 0;
     text-shadow: 1px 1px 1px #000;
@@ -145,7 +155,8 @@ header{
 
 .topnava:hover, .dropdown:hover .dropbtn{
     color: white;
-    background-color: #76ED15;
+    background-color: rgba(255,255,255,0.3);
+   
 }
 .dropdown-content a:hover{
     background-color: #ddd;
@@ -168,7 +179,8 @@ header{
 }
 
 
-@media screen and (max-width:600px){
+@media screen and (max-width:600px)
+{
     .topnav.responsive{
         position: relative;
     }
