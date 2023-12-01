@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-image: url("hinh/nen-hoa-hong.jpg");
+    background-repeat: no-repeat;
+    background-size:68%;
+    background-attachment: fixed;
+    background-position: bottom right ;
+    font-family: Arial;
+}
+@font-face {
+    font-family: 'Title';
+    src: url('fonts/UTM Wedding K&T.ttf');
+}
+h1{
+    font-family: 'Title';
+    color: white ;
+    text-align: center;
+    -webkit-text-stroke: 0.001px ;
+    -webkit-text-stroke-color: #FF69B4;
+    font-size: 64px;
+    text-shadow: -10px -4px 17px rgba(255,105,180,0.64);
+    font-weight:bold;
+    margin-bottom: 20px;
+}
+#highlight
+{
+    background-color: #fb1d8c;
+    color: white;
+}
+h2{
+margin-bottom: 0;}
+ul{
+    margin-top:5px ;
+    font-size: 24px;
+}
+.purple_flower { 
+    list-style-type: none;
+}
+.purple_flower li{
+    background: url("hinh/bullet-hoa-tim.png") no-repeat left center;
+    padding-left: 20px;
+}
+.pink_circle { 
+    list-style-type: none;
+}
+.pink_circle li{
+    background: url("hinh/bullet-tron-hong.png") no-repeat left center;
+    padding-left: 20px;
+}
+hr{
+    color: lightgray ;
+    margin-right: 50%; 
+    
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    }
+.content {
+    position: absolute;
+    float: right;
+    width: 66%;
+    margin: auto;
+    top: 50%;
+    left: 30%;
+}
+
+@media (max-width: 600px) {
+    img {
+    display: none;
+    }
+    body{
+        background-position:bottom center;
+        background-size: 100%;
+    }
+}
+#hoatrai{
+    float: left; 
+    max-width: 100%;
+    
+}
+#pink
+{
+    color: #fb1d8c;
+}
+    </style>
+</head>
+<body>
+    <h1>Shop Hoa tươi Hạnh Phúc</h1>
+    <div class="container">
+        <img src="hinh/binh-hoa.jpg" id="hoatrai" >
+        <div class="content">
+            <h2>1.<span id="highlight">Giới thiệu</span></h2>
+            <ul class="purple_flower">
+                <li>Thành lập ngày 01/07/2014 </li>
+                <li>Chuyên cung cấp các loại hoa tươi </li>
+                <li>Có trên 20 cửa hàng bán lẻ tại TP.HCM </li>
+                <li>Nhận kết giỏ hoa theo yêu cầu của khách hàng </li>
+            </ul>
+            <hr>
+            <h2>2.<span id="highlight">Liên hệ</span></h2>
+            <ul class="pink_circle">
+                <li>Điện thoại: 84-08-8351056  </li>
+                <li>Địa chỉ: <b>245 Nguyễn Văn Cừ Q5, TP.HCM</b> </li>
+                <li>Có trên 20 cửa hàng bán lẻ tại TP.HCM </li>
+                
+            </ul>
+            <i>Copyright: <span id="pink"> Công Ty Tin Hoc ABC</span></i>
+    </div>
+    </div>
+
+</body>
+</html>

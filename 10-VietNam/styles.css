@@ -1,0 +1,155 @@
+body{
+    display: flex;
+    font-size: 20px;
+    font-weight: normal ;
+    font-family:'Times New Roman', Times, serif;
+   
+    background-image: url(images/co-vietnam.png);
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#header{
+    color: red;
+    margin: auto;
+    text-align: center;
+    font-weight:bolder ;
+    padding: 20px;
+    font-size: 40px;
+}
+.nav-home{
+    text-align: right;
+    text-decoration: underline;
+}
+
+
+
+.VNCHXHCN{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+    
+    text-align: left;
+    font-size: 23px;
+}
+
+.VN-map{
+    align-items: center;
+}
+
+
+#map{
+   
+    text-align: center;
+    width: 22%;
+}
+#map-image{
+    max-width: 100%;
+}
+
+
+
+.Vn-globe{
+align-items: center;
+}
+#globe{
+    width: 20%;
+    text-align: center;
+}
+#globe-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.HN{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+    
+    text-align: left;
+    font-size: 23px;
+}
+
+#HN-header{
+    color:white;
+    background-color: red;
+}
+.img-trai{
+    float: left;
+    
+}
+.img-phai{
+    float: right;
+}
+#hoguom-img{
+    max-width: 28%;
+    margin-right: 25px;
+}
+#langbac-img{
+    max-width: 28%;
+}
+.dropcap{
+    font-size: 4em; 
+    font-weight: bold; 
+    float: left; 
+    margin-right: 8px; 
+    line-height: 1.2;
+    color: yellow; 
+    text-shadow: -1px -1px 0 red, 1px -1px 0 red, 3px 3px 5px rgba(0, 0, 0, 0.5) , 1px 1px 0 red;
+    
+}
+
+.HUE{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+    
+    text-align: left;
+    font-size: 23px;
+}
+#HUE-header{
+    color: white;
+    background-color: rgb(151, 21, 191); ;
+}
+
+
+.img-giua{
+    text-align: center;
+}
+#trangtien-img{
+    max-width: 60%;
+}
+#dienthaihoa-img{
+    max-width: 32%;
+    margin-right: 15px;
+}
+#dainoi-img{
+    max-width: 32%;
+}
+.HCM{
+    width: 100%;
+    margin: auto;
+
+    text-align: left;
+    font-size: 23px;
+}
+#HCM-header{
+    color: white;
+    background-color: rgb(255, 43, 149) ;
+}
+.hcm-table{
+    column-count: 3;
+    column-rule: black dashed;
+    text-align: left;
+    
+}
+
+#benthanh-img{
+    width: 100%;
+text-align: center;
+}
+@media (max-width: 600px) {
+    .hcm-table {
+        column-count:1;
+    }
+  }
